@@ -1,0 +1,200 @@
+nav .navbar-brand
+{
+    /* size for brand */
+    font-size: xx-large;
+}
+
+/* colors for brand */
+nav .navbar-brand .blue
+{
+    color: #537fbe;
+}
+nav .navbar-brand .red
+{
+    color: #ea433b;
+}
+nav .navbar-brand .yellow
+{
+    color: #f5b82e;
+}
+nav .navbar-brand .green
+{
+    color: #2e944b;
+}
+
+main .form-control
+{
+    /* center form controls */
+    display: inline-block;
+
+    /* override Bootstrap's 100% width for form controls */
+    width: auto;
+}
+
+main
+{
+    /* scroll horizontally as needed */
+    overflow-x: auto;
+
+    /* center contents */
+    /*text-align: center;*/
+}
+
+div.m {
+    /* center contents */
+    text-align: center;
+}
+
+main img
+{
+    /* constrain images on small screens */
+    max-width: 100%;
+}
+
+main.fullHeight {
+    position: absolute;
+    top: auto;
+    left:0;
+    bottom: auto;
+    right:0;
+    margin: auto;
+}
+
+h1.s {
+  font: small-caps 100% serif;
+  font-size:50px;
+}
+
+h5.s {
+  font: small-caps 100% serif;
+  font-size:25px;
+}
+
+a.serif {
+  font: small-caps 100%/200% serif;
+  font-size:25px;
+}
+
+a.italic {
+  font-family: "Latin Modern Roman 10";
+  font-style: italic;
+}
+
+a.oblique {
+  font-family: "Latin Modern Roman 10";
+  font-style: oblique;
+}
+
+p.serif {
+  font: small-caps 100%/200% serif;
+}
+
+p.italic {
+  font-family: "Latin Modern Roman 10";
+  font-style: italic;
+}
+
+p.oblique {
+  font-family: "Latin Modern Roman 10";
+  font-style: oblique;
+}
+
+p.f2 {
+  font-family: "Latin Modern Roman 10";
+  font-style: italic;
+  font-size:20px;
+}
+
+p.f {
+  font-family: "Latin Modern Roman 10";
+  font-style: italic;
+  font-size:24px;
+}
+
+li.f {
+  font-size:13px;
+}
+
+h1.serif {
+  font: small-caps 100%/200%;
+  font-size:50px;
+}
+
+div.gb {
+  background-color: #EEEEEE;
+}
+
+main.gb {
+  background-color: #EEEEEE;
+}
+
+ul.gb {
+  background-color: #F5F5F5;
+}
+
+thead.bg {
+  background-color: #B0BEC5;
+}
+
+/* Button  */
+
+button.fav {
+
+    background: transparent;
+    border: none !important;
+}
+
+
+/* Image Gallery */
+@media (min-width: 768px) {
+.carousel-multi-item-2 .col-md-3 {
+float: left;
+width: 25%;
+max-width: 100%; } }
+
+.carousel-multi-item-2 .card img {
+border-radius: 2px; }
+
+
+/* Alerts */
+.alert.success {
+  background-color: green;
+}
+
+.alert.error {
+  background-color: red;
+}
+
+
+/* Scrollbar  */
+
+.scrollbar {
+margin-left: 30px;
+float: left;
+height: 300px;
+width: 65px;
+background: #fff;
+overflow-y: scroll;
+margin-bottom: 25px;
+}
+.force-overflow {
+min-height: 450px;
+}
+
+.scrollbar-default::-webkit-scrollbar-track {
+-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+background-color: #F5F5F5;
+border-radius: 10px; }
+
+.scrollbar-default::-webkit-scrollbar {
+width: 12px;
+background-color: #F5F5F5; }
+
+.scrollbar-default::-webkit-scrollbar-thumb {
+border-radius: 10px;
+-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+background-color: #B0BEC5; }
+
+.scrollbar-default {
+scrollbar-color: #2BBBAD #F5F5F5;
+}

@@ -1,0 +1,176 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Veiw
+{% endblock %}
+
+{% block main %}
+
+
+    <a class="nav-link black-text font-weight-bold m-0 p-0 " href="/favorites" style="width: 7%"><i class="fa fa-chevron-left fa-1x pr-1"></i>Back</a>
+
+    {% if rowTemp[0].type == "Touristic Place" %}
+        <div class="m-0 py-0 pl-3  pr-3 gb rounded">
+            <div class="row-1 force-overflow">
+                <div class="card my-3 border-0">
+                    <div class="card-footer p-2 bg-secondary rounded-top d-flex justify-content-between">
+                        <h5 class="card-title m-1 font-weight-bold text-white s">{{rowTemp[0].name}}</h5>
+                    </div>
+                    <div class="row no-gutters border border-top-0 border-secondary rounded-bottom">
+                        <div class="col">
+                            <div class="card-body p-2">
+                                <p class="card-text "><strong>Description:</strong> {{rowTemp[0].description}}</p>
+                                <div>
+                                    <p class="card-text"><small><strong>Address:</strong> {{rowTemp[0].address}}</small></p>
+                                </div>
+                                <div>
+                                    <p class="card-text"><small><strong>Hourhand:</strong> {{rowTemp[0].hourhand}}</small></p>
+                                </div>
+                                <div class="row m pt-3 pb-1">
+                                    <div class="col">
+                                        <div>
+                                            <a href={{rowTemp[0].img1}} target="_blank">
+                                                <img class="img rounded" src={{rowTemp[0].img1}} alt="Card image cap" width="400" height="214">
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div>
+                                            <a href={{rowTemp[0].img2}} target="_blank">
+                                                <img class="img rounded" src={{rowTemp[0].img2}} alt="Card image cap" width="400" height="214">
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div>
+                                            <a href={{rowTemp[0].img3}} target="_blank">
+                                                <img class="img rounded" src={{rowTemp[0].img3}} alt="Card image cap" width="400" height="214">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+
+
+    {% if rowTemp[0].type == "Restaurant" %}
+        <div class="m-0 py-0 pl-3  pr-3 gb rounded">
+            <div class="row-1 force-overflow">
+                <div class="card my-3 border-0">
+                    <div class="card-footer p-2 bg-secondary rounded-top d-flex justify-content-between">
+                        <h5 class="card-title m-1 font-weight-bold text-white s">{{rowTemp[0].name}}</h5>
+                    </div>
+                    <div class="row no-gutters border border-top-0 border-secondary rounded-bottom">
+                        <div class="col">
+                            <div class="card-body p-2">
+                                <p class="card-text pt-2 mb-0 pb-0"><strong>Kind of food:</strong> {{rowTemp[0].kindoffood}}</p>
+                                <div>
+                                    <p class="card-text"><small><strong>Address:</strong> {{rowTemp[0].address}}</small></p>
+                                </div>
+                                <div>
+                                    <p class="card-text"><small><strong>Address:</strong> {{rowTemp[0].phone}}</small></p>
+                                </div>
+                                <div>
+                                    <p class="card-text"><small><strong>Hourhand:</strong> {{rowTemp[0].hourHand}}</small></p>
+                                </div>
+                                <div class="row m pt-3 pb-1">
+                                    <div class="col">
+                                        <div>
+                                            <a href={{rowTemp[0].img1}} target="_blank">
+                                                <img class="img rounded" src={{rowTemp[0].img1}} alt="Card image cap" width="400" height="214">
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div>
+                                            <a href={{rowTemp[0].img2}} target="_blank">
+                                                <img class="img rounded" src={{rowTemp[0].img2}} alt="Card image cap" width="400" height="214">
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div>
+                                            <a href={{rowTemp[0].img3}} target="_blank">
+                                                <img class="img rounded" src={{rowTemp[0].img3}} alt="Card image cap" width="400" height="214">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+
+
+    {% if rowTemp[0].type == "Hotel" %}
+        <div class="m-0 py-0 pl-3  pr-3 gb rounded">
+            <div class="row-1 force-overflow">
+                <div class="card my-3 border-0">
+                    <div class="card-footer p-2 bg-secondary rounded-top d-flex justify-content-between">
+                        <h5 class="card-title m-1 font-weight-bold text-white s">{{rowTemp[0].name}}</h5>
+                    </div>
+                    <div class="row no-gutters border border-top-0 border-secondary rounded-bottom">
+                        <div class="col">
+                            <div class="card-body p-2">
+                                <p class="card-text pt-2 mb-0 pb-0"><strong>Description:</strong> {{rowTemp[0].description}}</p>
+                                <div>
+                                    <p class="card-text"><small><strong>Hotel stars:</strong> {{rowTemp[0].stars}} Stars</small></p>
+                                </div>
+                                <div>
+                                    <p class="card-text"><small><strong>Address:</strong> {{rowTemp[0].address}}</small></p>
+                                </div>
+                                <div>
+                                    <p class="card-text"><small><strong>Address:</strong> {{rowTemp[0].phone}}</small></p>
+                                </div>
+                                <div class="row m pt-3 pb-1">
+                                    <div class="col">
+                                        <div>
+                                            <a href={{rowTemp[0].img1}} target="_blank">
+                                                <img class="img rounded" src={{rowTemp[0].img1}} alt="Card image cap" width="400" height="214">
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div>
+                                            <a href={{rowTemp[0].img2}} target="_blank">
+                                                <img class="img rounded" src={{rowTemp[0].img2}} alt="Card image cap" width="400" height="214">
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div>
+                                            <a href={{rowTemp[0].img3}} target="_blank">
+                                                <img class="img rounded" src={{rowTemp[0].img3}} alt="Card image cap" width="400" height="214">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+
+
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,83 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Restaurants
+{% endblock %}
+
+{% block main %}
+    <div class="pb-5 justify-content-center">
+
+        <h1 class="s text-center">Restaurants</h1>
+
+        <p class="f2">Thanks to the legacy of Spanish, Afro-descendant and indigenous cultural interaction and the combination of products
+            from the region with those brought from Spain, Popayán has become a gastronomic city par excellence.
+        </p>
+
+        <div class="m-0 py-0 pl-3 pr-3 gb rounded scrollbar scrollbar-default" style="width: 100%; height: 510px">
+            <div class="row-1 force-overflow">
+
+                {% for rowR in rowsR %}
+                <div class="card my-3 border-0">
+                    <div class="card-footer p-2 bg-secondary rounded-top d-flex justify-content-between">
+                        <h5 class="card-title m-1 font-weight-bold text-white s">{{rowR.name}}</h5>
+                        {% if rowR.fav == 0 %}
+                            <form method ="post" action="/restaurants">
+                                <button type="submit" class="fav px-0" name="favR" value={{rowR.id}}>
+                                    <i class="btn px-1 py-0 py-0 fa fa-heart-o my-0" style="font-size:30px; color:white"></i>
+                                </button>
+                            </form>
+                        {% else %}
+
+                                    <i class="btn px-1 py-0 py-0 fa fa-heart my-0" style="font-size:30px; color:white"></i>
+
+                        {% endif %}
+                    </div>
+                    <div class="row no-gutters border border-top-0 border-secondary rounded-bottom">
+                        <div class="col">
+                            <div class="card-body p-2">
+                                <p class="card-text pt-2 mb-0 pb-0"><strong>Kind of food:</strong> {{rowR.kindoffood}}</p>
+                                <div>
+                                    <p class="card-text"><small><strong>Address:</strong> {{rowR.address}}</small></p>
+                                </div>
+                                <div>
+                                    <p class="card-text"><small><strong>Address:</strong> {{rowR.phone}}</small></p>
+                                </div>
+                                <div>
+                                    <p class="card-text"><small><strong>Hourhand:</strong> {{rowR.hourHand}}</small></p>
+                                </div>
+                                <div class="row m pt-3 pb-1">
+                                    <div class="col">
+                                        <div>
+                                            <a href={{rowR.img1}} target="_blank">
+                                                <img class="img rounded" src={{rowR.img1}} alt="Card image cap" width="400" height="214">
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div>
+                                            <a href={{rowR.img2}} target="_blank">
+                                                <img class="img rounded" src={{rowR.img2}} alt="Card image cap" width="400" height="214">
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div>
+                                            <a href={{rowR.img3}} target="_blank">
+                                                <img class="img rounded" src={{rowR.img3}} alt="Card image cap" width="400" height="214">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

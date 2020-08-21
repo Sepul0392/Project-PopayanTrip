@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Favorites
+{% endblock %}
+
+{% block main %}
+
+    <h1 class="s text-center">My favorites</h1>
+
+    <div class="py-3"> </div>
+
+
+    <div class="container p-0 m-0 gb table-responsive rounded scrollbar scrollbar-default" style="width: 100%; height: 420px">
+        <table class="table m-0 table-striped text-left rounded-top">
+            <thead class="bg">
+                <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Phone</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for r in rowsF %}
+                    <tr>
+                        <td>{{r.type}}</td>
+                        <td>{{r.name}}</td>
+                        <td>{{r.address}}</td>
+                        <td>
+                            {% if not r.phone %}
+
+                            {% else %}
+                                {{r.phone}}
+                            {% endif %}
+                        </td>
+                        <td class="d-flex justify-content-center px-0">
+                            <form method ="post" action="/view">
+                                <button type="submit" class="fav px-0" name="searchF" value={{r.p_id}},{{r.type}}>
+                                    <i class="btn py-0 py-0 my-0 fa fa-search" style="font-size:25px; color: #828282"></i>
+                                </button>
+                            </form>
+                            <form method ="post" action="/favorites">
+                                <button type="submit" class="fav px-0" name="delF" value={{r.id}}>
+                                    <i class="btn py-0 py-0 my-0 fa fa-trash" style="font-size:25px; color: #828282"></i>
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
